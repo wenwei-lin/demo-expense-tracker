@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard'
 function App() {
   return (
     <div className="App bg-gray-100 h-screen">
-      <div className='flex relative p-16'>
+      <div className='flex relative p-16 pb-0'>
         <div className='w-72'>
           <SideBar />
         </div>

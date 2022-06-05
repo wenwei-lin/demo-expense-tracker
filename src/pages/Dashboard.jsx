@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
+
 import { AiOutlineSearch } from 'react-icons/ai'
 import { GiForkKnifeSpoon } from 'react-icons/gi'
 import { BsPhone, BsApple } from 'react-icons/bs'
@@ -12,6 +15,31 @@ import TransactionCard from '../components/dashboard/TransactionCard'
 import avatar from '../data/imgs/avatar.jpg'
 
 const Dashboard = () => {
+  const options = {
+    chart: {
+      type: 'spline',
+      backgroundColor: '#F3F4F6',
+      height: 80,
+
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      visible: false,
+    },
+    yAxis: {
+      visible: false,
+    },
+    series: [
+      {
+        data: [100, 200, 500, 2200],
+        color: '#22c55e',
+        showInLegend: false,
+      }
+    ]
+  }
+
   return (
     <div className='grid grid-cols-3 gap-16'>
       {/* Main content */}
@@ -90,7 +118,7 @@ const Dashboard = () => {
       </div>
 
       {/* Right bar */}
-      <div className='flex flex-col'>
+      <div className='flex flex-col gap-10'>
 
         {/* User Profile */}
         <div className='border w-full h-72 rounded-xl bg-gray-200 p-4'>
@@ -101,20 +129,20 @@ const Dashboard = () => {
             <div className='flex justify-center mt-3'>
               <div className='flex flex-col'>
                 <div>
-                  <h1 className='font-poppins text-xl font-medium'>Welcome, Wenwei!</h1>
+                  <h1 className='font-poppins text-2xl font-medium'>Welcome, Wenwei!</h1>
                 </div>
                 <div className='flex flex-col gap-2 mt-2'>
                   <div className='flex items-center justify-between w-full'>
-                    <span className='text-base font-poppins text-gray-500 font-medium'>Profile</span>
-                    <span className='text-gray-500'>{<BiPencil />}</span>
+                    <span className='text-lg font-poppins text-gray-500 font-medium'>Profile</span>
+                    <span className='text-gray-500 text-lg'>{<BiPencil />}</span>
                   </div>
                   <div className='flex items-center justify-between w-full'>
-                    <span className=' text-base font-poppins text-gray-500 font-medium'>Settings</span>
-                    <span className='text-gray-500'>{<VscGear />}</span>
+                    <span className=' text-lg font-poppins text-gray-500 font-medium'>Settings</span>
+                    <span className='text-gray-500 text-lg'>{<VscGear />}</span>
                   </div>
                   <div className='flex items-center justify-between w-full'>
-                    <span className=' text-base font-poppins text-gray-500 font-medium'>Wallet</span>
-                    <span className='text-gray-500'>{<BiWallet />}</span>
+                    <span className=' text-lg font-poppins text-gray-500 font-medium'>Wallet</span>
+                    <span className='text-gray-500 text-lg'>{<BiWallet />}</span>
                   </div>
                 </div>
               </div>
@@ -124,10 +152,26 @@ const Dashboard = () => {
 
         {/* Income Chart */}
 
-
+        <div className='w-full h-36 border border-gray-300 rounded-xl px-3 py-2'>
+          <h2 className='font-poppins font-semibold text-gray-800'>Income</h2>
+          <div>
+            <span className='font-poppins text-xl font-semibold'>¥ 3,000</span>
+          </div>
+          <div className='h-30'>
+            <HighchartsReact highcharts={Highcharts} options={options} className="" />
+          </div>
+        </div>
 
         {/* Expense Chart */}
-
+        <div className='w-full h-36 border border-gray-300 rounded-xl px-3 py-2'>
+          <h2 className='font-poppins font-semibold text-gray-800'>Expenses</h2>
+          <div>
+            <span className='font-poppins text-xl font-semibold'>¥ 3,000</span>
+          </div>
+          <div className='h-30'>
+            <HighchartsReact highcharts={Highcharts} options={options} className="" />
+          </div>
+        </div>
       </div>
     </div>
   )
