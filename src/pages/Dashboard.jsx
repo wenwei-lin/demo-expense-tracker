@@ -15,7 +15,7 @@ import TransactionCard from '../components/dashboard/TransactionCard'
 import avatar from '../data/imgs/avatar.jpg'
 
 const Dashboard = () => {
-  const options = {
+  const incomeChartOptions = {
     chart: {
       type: 'spline',
       backgroundColor: '#F3F4F6',
@@ -35,6 +35,31 @@ const Dashboard = () => {
       {
         data: [100, 200, 500, 2200],
         color: '#22c55e',
+        showInLegend: false,
+      }
+    ]
+  }
+
+  const expenseChartOptions = {
+    chart: {
+      type: 'spline',
+      backgroundColor: '#F3F4F6',
+      height: 80,
+
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      visible: false,
+    },
+    yAxis: {
+      visible: false,
+    },
+    series: [
+      {
+        data: [3500, 1000, 500, 3000],
+        color: '#DC2626',
         showInLegend: false,
       }
     ]
@@ -107,9 +132,15 @@ const Dashboard = () => {
               icon={<BsApple />}
             />
             <TransactionCard
-              title="iWatch SE"
+              title="Apple Watch SE"
               date="13 Feb 2022"
               amount="1899.00"
+              icon={<BsApple />}
+            />
+            <TransactionCard
+              title="iPhone 13 Pro"
+              date="17 Jan 2022"
+              amount="3500.00"
               icon={<BsApple />}
             />
           </div>
@@ -155,10 +186,10 @@ const Dashboard = () => {
         <div className='w-full h-36 border border-gray-300 rounded-xl px-3 py-2'>
           <h2 className='font-poppins font-semibold text-gray-800'>Income</h2>
           <div>
-            <span className='font-poppins text-xl font-semibold'>¥ 3,000</span>
+            <span className='font-poppins text-xl font-semibold'>¥ 3,000.00</span>
           </div>
           <div className='h-30'>
-            <HighchartsReact highcharts={Highcharts} options={options} className="" />
+            <HighchartsReact highcharts={Highcharts} options={incomeChartOptions} className="" />
           </div>
         </div>
 
@@ -166,10 +197,10 @@ const Dashboard = () => {
         <div className='w-full h-36 border border-gray-300 rounded-xl px-3 py-2'>
           <h2 className='font-poppins font-semibold text-gray-800'>Expenses</h2>
           <div>
-            <span className='font-poppins text-xl font-semibold'>¥ 3,000</span>
+            <span className='font-poppins text-xl font-semibold'>¥ 8,000.00</span>
           </div>
           <div className='h-30'>
-            <HighchartsReact highcharts={Highcharts} options={options} className="" />
+            <HighchartsReact highcharts={Highcharts} options={expenseChartOptions} className="" />
           </div>
         </div>
       </div>
