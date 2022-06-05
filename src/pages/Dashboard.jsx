@@ -96,19 +96,19 @@ const Dashboard = () => {
           <div className='flex justify-between mt-6'>
             <CategoryCard
               title="Eating"
-              bgColor="red"
+              bgColor="#F87171"
               icon={<GiForkKnifeSpoon />}
               amount={2000.00}
             />
             <CategoryCard
               title="Equipments"
-              bgColor="blue"
+              bgColor="#3B82F6"
               icon={<BsPhone />}
               amount={3000.00}
             />
             <CategoryCard
               title="Health"
-              bgColor="green"
+              bgColor="#10B981"
               icon={<FaHeartbeat />}
               amount={4000.00}
             />

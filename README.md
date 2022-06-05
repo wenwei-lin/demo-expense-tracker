@@ -12,7 +12,7 @@ Owing to time constraint, I only implement the Desktop view.
 
 - My Figma file: [https://www.figma.com/file/QXCOFcrOlTsuJTouj9Xw02/Expense-Tracker?node-id=1303%3A1041](https://www.figma.com/file/QXCOFcrOlTsuJTouj9Xw02/Expense-Tracker?node-id=1303%3A1041)
 
-- Live demo: 
+- Live demo: [https://thankful-island-0b07d0600.1.azurestaticapps.net/](https://thankful-island-0b07d0600.1.azurestaticapps.net/)
 
 ## Preview
 

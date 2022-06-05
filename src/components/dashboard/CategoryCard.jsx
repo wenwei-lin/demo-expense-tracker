@@ -2,7 +2,10 @@ import React from 'react'
 
 const CategoryCard = ({ icon, bgColor, title, amount }) => {
     return (
-        <div className={`flex bg-${bgColor}-400 w-48 h-14 rounded-xl items-center`}>
+        <div 
+        className={`flex bg-red-400 w-48 h-14 rounded-xl items-center`}
+        style={{backgroundColor: bgColor}}
+        >
             <div className='text-2xl text-gray-100 px-3'>
                 {icon}
             </div>
