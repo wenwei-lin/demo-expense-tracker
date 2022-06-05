@@ -155,7 +155,7 @@ const Dashboard = () => {
         <div className='border w-full h-72 rounded-xl bg-gray-200 p-4'>
           <div className='flex flex-col'>
             <div className='flex justify-center'>
-              <img src={avatar} className="h-16 w-16 rounded-full"></img>
+              <img alt='avatar' src={avatar} className="h-16 w-16 rounded-full"></img>
             </div>
             <div className='flex justify-center mt-3'>
               <div className='flex flex-col'>
