@@ -5,12 +5,12 @@ import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
-    <div className="App">
-      <div className='flex'>
-        <div>
+    <div className="App bg-gray-100 h-screen">
+      <div className='flex relative p-16'>
+        <div className='w-72'>
           <SideBar />
         </div>
-        <div>
+        <div className='w-full'>
           <Routes>
             <Route path='/' element={<Dashboard />} />
           </Routes>
